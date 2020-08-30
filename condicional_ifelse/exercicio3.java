@@ -17,7 +17,7 @@ public class exercicio3 {
 		} else if (vendas >= 10000) {
 			salario = salario + 1000;
 		} else {
-			salario = salario;
+			salario = 240;
 		}
 		
 		System.out.println("Salário = " + salario);
