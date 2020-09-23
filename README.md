@@ -1,2 +1,2 @@
 # Exercícios 
-Vou postar todos meus códigos feitos aqui. 
+Link do PDF que contém todos os enunciados dos exercícios que realizei: 
