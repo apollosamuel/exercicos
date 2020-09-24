@@ -5,20 +5,22 @@ public class exercicio10b {
 	public static void main(String[] args) {
 		
 		double serie = 0;
-		int num1 = -2; 
-		int num2 = 4;
+		double num1 = 0;
+		double num2 = 0;
 		
 		for(int i = 1; i <= 100; i++) {
 			
-			num1 += 3;
+			num1 += 2;
 			num2 += 3;
+		
+			serie += num1/num2;
 			
-			serie += ((double)num1)/Math.sqrt(num2);
-
 		}
+		
+		System.out.println(1 + Math.sqrt(serie));
+		
 
-		System.out.println((5.0/3.0)*serie);
-
+		
 	}
 
 }
