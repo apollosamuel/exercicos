@@ -13,7 +13,7 @@ public class exercicio10f {
 			num1 += 2;
 			
 			
-			serie += Math.pow(i, 2)/(Math.pow(num2, 2));
+			serie += Math.pow(i, 2)/(Math.pow(num1, 2));
 			
 		}
 		
