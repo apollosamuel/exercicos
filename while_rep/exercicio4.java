@@ -56,7 +56,7 @@ public class exercicio4 {
 				nomeVelho = nome;
 			}
 			
-			percentM = (contM/sexoTotal)*100;
+			percentM = ((double)(contM/sexoTotal))*100;
 		}
 		
 		System.out.println("Média idade = " + idadeMedia/cont);
