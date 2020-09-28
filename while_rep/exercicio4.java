@@ -13,11 +13,12 @@ public class exercicio4 {
 		int contM = 0;
 		int contF = 0;
 		int cont7 = 0;
+		int sexoTotal = 0; 
 		double percentM = 0;
 		String nomeVelho = "";
 		int idadeVelho = 200;
 		
-		for(int i= 1; i < 3; i++) {
+		for(int i= 1; i < 4; i++) {
 			
 			System.out.println("Nome: ");
 			String nome = input.nextLine();
@@ -39,12 +40,13 @@ public class exercicio4 {
 			
 			if (charSexo == 'M') {
 				contM++;
+
 			}else if (charSexo == 'F') {
 				contF++;
+
 			}
 			
-			percentM = contM/(contM+contF)*100;
-			
+			sexoTotal += contM + contF;
 			if (charSexo == 'F' && pontos == 7) {
 				cont7++;
 			}
@@ -54,6 +56,7 @@ public class exercicio4 {
 				nomeVelho = nome;
 			}
 			
+			percentM = (contM/sexoTotal)*100;
 		}
 		
 		System.out.println("Média idade = " + idadeMedia/cont);
