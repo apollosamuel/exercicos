@@ -6,7 +6,7 @@ public class exercicio9 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int registro = 0;
+
 		int gerencia = 0;
 		int adm = 0;
 		int pesquisa = 0;
@@ -19,74 +19,79 @@ public class exercicio9 {
 		int numeroAntigo = 0;
 		int numeroNovo = 1000;
 		String nome = "";
-	
+
+		System.out.println("Digite FIM no nome para terminar o programa");
+
 		do {
 
-			System.out.println("Digite o Registro Funcional: ");
-			registro = input.nextInt(); input.nextLine();
-			
+			System.out.println("Digite o nome do funcion√°rio: ");
+			nome = input.nextLine();
+
+			if (!nome.equals("FIM")) {
+				System.out.println("Digite o Registro Funcional: ");
+				int registro = input.nextInt();input.nextLine();
+
+				int ano = registro/10000;
+				int setor = (registro/1000)%10;
 
 
-			if (registro != -1) {
-				
-				if((registro < 100000 || registro > 999999) || (registro/10000 < 10 || registro/10000 > 14) || (registro/1000%10 < 1 || registro/1000%10 > 4 )) {
-					System.err.println("REGISTRO INV¡LIDO");
-				}
-				
-				System.out.println("Digite o nome do funcion·rio: ");
-				nome = input.nextLine();
-				
-				if(registro/1000%10 == 1) {
-					gerencia++;
-				}else if(registro/1000%10 == 2) {
-					adm++;
-					if(registro/10000 == 10) {
-						adm10++;
+				if(ano<10 || ano > 14 || setor < 1 || setor > 4 || registro < 99999 || registro > 999999) {
+					System.err.println("REGISTRO INV√ÅLIDO");
+				}else {
+
+					if(registro/10000 < anoAntigo) {
+						if(registro%1000 < numeroAntigo) {
+							anoAntigo = registro/10000;
+							numeroAntigo = registro%1000;
+							funcionarioAntigo = nome; 
+						}
 					}
-				}else if(registro/1000%10 == 3) {
-					pesquisa++;
-				}else if(registro/1000%10 == 4) {
-					obras++;
+
+					if(registro/10000 > anoNovo) {
+						if(registro%1000 > numeroNovo) {
+							anoNovo = registro/10000;
+							numeroNovo = registro%1000;
+							funcionarioNovo = nome; 
+						}
+					}
+					if(registro/1000%10 == 1) {
+						gerencia++;
+					}else if(registro/1000%10 == 2) {
+						adm++;
+						if(registro/10000 == 10) {
+							adm10++;
+						}
+					}else if(registro/1000%10 == 3) {
+						pesquisa++;
+					}else if(registro/1000%10 == 4) {
+						obras++;
+					}
+
 				}
-				
+
 			}
 
-
-		}while(registro != -1);
+		}while(!nome.equals("FIM"));
 
 		if(gerencia > adm && gerencia > obras && gerencia > pesquisa) {
-			System.out.println("Setor com mais funcion·rios È a GerÍncia");
+			System.out.println("Setor com mais funcion√°rios √© a Ger√™ncia");
 		}else if(adm > gerencia && adm > obras && adm > pesquisa) {
-			System.out.println("Setor com mais funcion·rios È a AdministraÁ„o");	
+			System.out.println("Setor com mais funcion√°rios √© a Administra√ß√£o");	
 		}else if(pesquisa > gerencia && pesquisa > obras && pesquisa > adm) {
-			System.out.println("Setor com mais funcion·rios È a Pesquisa");	
+			System.out.println("Setor com mais funcion√°rios √© a Pesquisa");	
 		}else if(obras > gerencia && obras > adm && obras > pesquisa) {
-			System.out.println("Setor com mais funcion·rios È a Obras");	
+			System.out.println("Setor com mais funcion√°rios √© a Obras");	
 		}
-		
-		if(registro/10000 > anoAntigo) {
-			if(registro%1000 > numeroAntigo) {
-				anoAntigo = registro/10000;
-				numeroAntigo = registro%1000;
-				funcionarioAntigo = nome; 
-			}
-		}
-		
-		if(registro/10000 < anoNovo) {
-			if(registro%1000 < numeroNovo) {
-				anoNovo = registro/10000;
-				numeroNovo = registro%1000;
-				funcionarioNovo = nome; 
-			}
-		}
-		
-		
-		
-		System.out.println("Quantidade de funcion·rios por setor: \nGerÍncia = " + gerencia + "\nAdministraÁ„o = " + adm + "\nPesquisa = " + pesquisa + "\nObras = " + obras);
-		System.out.println("Quantidade de funcion·rios que foram admitidos em 2010 e trabalham na administraÁ„o = " + adm10);
-		System.out.println("Funcion·rio mais antigo = " + funcionarioAntigo);
-		System.out.println("Funcion·rio mais novo = " + funcionarioNovo);
-		
+
+
+
+
+
+		System.out.println("Quantidade de funcion√°rios por setor: \nGer√™ncia = " + gerencia + "\nAdministra√ß√£o = " + adm + "\nPesquisa = " + pesquisa + "\nObras = " + obras);
+		System.out.println("Quantidade de funcion√°rios que foram admitidos em 2010 e trabalham na administra√ß√£o = " + adm10);
+		System.out.println("Funcion√°rio mais antigo = " + funcionarioAntigo);
+		System.out.println("Funcion√°rio mais novo = " + funcionarioNovo);
+
 		input.close();
 	}
 
