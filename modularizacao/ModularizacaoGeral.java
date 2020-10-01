@@ -22,6 +22,30 @@ public class ModularizacaoGeral {
 		
 	}
 	
-	
+	public static void Exercicio2() {
+		
+		double x = 0;
+		double fx = 0;
+		
+		do {
+			System.out.println("Digite o valor de x: ");
+			x = input.nextInt();
+			
+			if (x != -1) {
+				if(x < 4) {
+					fx = (5*x+3)/Math.sqrt((16-Math.pow(x, 2)));
+				}else if( x == 4) {
+					fx = 0;
+				}else if( x > 4) {
+					fx = (5*x+3)/Math.sqrt(Math.pow(x, 2)-16);
+				}
+				System.out.println("f(x) = " + fx);
+			}
+			
+			
+			
+		}while (x != -1);
+		
+	}
 	
 }
