@@ -1,6 +1,8 @@
 package modularizacao;
 
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class ModularizacaoGeral {
 	static Scanner input = new Scanner(System.in);
@@ -70,7 +72,34 @@ public class ModularizacaoGeral {
 		
 	}
 
+	public static void Exercicio4() {
+		
+		int cont = 0;
+		int numero = 0;
+		Random gerador = new Random();
+		int randomInt = gerador.nextInt(100) + 1;
+		
+		System.out.println("Bem vindo ao jogo de Adivinhação!");
+		
+		do {
+			System.out.println("Digite um número: ");
+			numero = input.nextInt();
+			cont++;
+			
+			if(numero == randomInt) {
+				System.out.println("Acertou!");
+				System.out.println("Você acertou em " + cont + " tentativas.");
+				numero = -1;
+			}else if (numero > randomInt) {
+				System.out.println("Você errou! O seu chute foi maior do que o número secreto.");
+			}else if(numero < randomInt) {
+				System.out.println("Você errou! O seu chute foi menor do que o número secreto.");
+			}
+			
+		}while(numero != -1);
 
+
+	}
 
 
 
