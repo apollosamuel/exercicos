@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ModularizacaoGeral {
 	static Scanner input = new Scanner(System.in);
 
-	public static void exercicio1() {
+	public static void Exercicio1() {
 
 		System.out.println("Digite o x1: ");
 		int x1 = input.nextInt();
@@ -19,5 +19,9 @@ public class ModularizacaoGeral {
 		double distancia = Math.sqrt(Math.pow((x1-x2), 2)+Math.pow((y1-y2), 2));
 
 		System.out.println("Distância = " + distancia);
+		
 	}
+	
+	
+	
 }
