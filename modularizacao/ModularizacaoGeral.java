@@ -48,4 +48,35 @@ public class ModularizacaoGeral {
 		
 	}
 	
+	public static void Exercicio3() {
+
+		System.out.println("Digite um numero: ");
+		int numero = input.nextInt();
+		System.out.println("Digite a posição: ");
+		int posicao = input.nextInt();
+		
+		if (numero > 0 && numero <= 999999999) {
+			
+			int retorno = numero/(int)Math.pow(10, posicao-1)%10;
+			
+			System.out.println("Retorno = " + retorno);
+			
+		}else {
+			
+			System.err.println("Digite um número entre 0 e 999999999!");
+			
+		}
+		
+		
+	}
+
+
+
+
+
+
+
+
+
+
 }
