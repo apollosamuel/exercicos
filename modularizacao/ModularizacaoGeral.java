@@ -103,7 +103,10 @@ public class ModularizacaoGeral {
 
 	}
 
-	public static void Exercicio5(double angulo) {
+	public static void Exercicio5() {
+		
+		System.out.println("Digite um angulo: ");
+		double angulo = input.nextDouble();
 		
 		System.out.println("Seno: " + Math.sin(angulo));
 		System.out.println("Cosseno: " + Math.cos(angulo));
