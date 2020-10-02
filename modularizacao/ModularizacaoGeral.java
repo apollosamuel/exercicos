@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 
+
+
 public class ModularizacaoGeral {
 	static Scanner input = new Scanner(System.in);
 
@@ -101,8 +103,15 @@ public class ModularizacaoGeral {
 
 	}
 
-
-
+	public static void Exercicio5(double angulo) {
+		
+		System.out.println("Seno: " + Math.sin(angulo));
+		System.out.println("Cosseno: " + Math.cos(angulo));
+		System.out.println("Tangente: " + Math.tan(angulo));
+		System.out.println("Arco seno: " + Math.asin(angulo));
+		System.out.println("Arco consseno: " + Math.acos(angulo));
+		System.out.println("Arco tangente: " + Math.atan(angulo));
+	}
 
 
 
