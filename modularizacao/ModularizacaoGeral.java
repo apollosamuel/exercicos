@@ -178,6 +178,9 @@ public class ModularizacaoGeral {
 	}
 
 	public static void Exercicio11() {
+		System.out.print("Insira o nome: ");
+		String[] nome = input.nextLine().toUpperCase().split(" ");
+		System.out.println("Penúltima palavra: "+nome[nome.length-2]);
 		
 	}
 
