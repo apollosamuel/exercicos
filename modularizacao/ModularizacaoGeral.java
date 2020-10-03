@@ -158,6 +158,14 @@ public class ModularizacaoGeral {
 	
 	public static void Exercicio9() {
 		
+		System.out.println("Insira o nome: ");
+		String nome[] = input.nextLine().toLowerCase().split(" ");
+		
+		for (String palavra:nome) {
+			System.out.print(Character.toUpperCase(palavra.charAt(0))+palavra.substring(1) + " ");
+		}
+		
+		
 	}
 
 	public static void Exercicio10() {
