@@ -169,7 +169,12 @@ public class ModularizacaoGeral {
 	}
 
 	public static void Exercicio10() {
+		System.out.print("Insira o nome: ");
+		char nome[] = input.nextLine().toUpperCase().toCharArray();
 		
+		for (char caractere : nome) {
+			System.out.println(caractere);
+		}
 	}
 
 	public static void Exercicio11() {
