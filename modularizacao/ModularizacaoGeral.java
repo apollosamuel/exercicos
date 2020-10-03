@@ -115,7 +115,23 @@ public class ModularizacaoGeral {
 		System.out.println("Arco consseno: " + Math.acos(angulo));
 		System.out.println("Arco tangente: " + Math.atan(angulo));
 	}
-
+	
+	public static void Exercicio6() {
+		
+		System.out.print("Qual é o nome da família? ");
+		String familia = input.nextLine();
+		
+		int numeroDePessoasDaFamilia = 0;
+		for (int i = 0; i < 100; i++) {
+			System.out.print("Insira o nome: ");
+			String nome = input.nextLine();
+			
+			if(nome.endsWith(familia)) {
+				numeroDePessoasDaFamilia++;
+			}
+		}
+		System.out.print("Número de pessoas: " + numeroDePessoasDaFamilia);
+	}
 
 
 
