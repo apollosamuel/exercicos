@@ -133,7 +133,30 @@ public class ModularizacaoGeral {
 		System.out.print("Número de pessoas: " + numeroDePessoasDaFamilia);
 	}
 
+	public static void Exercicio7() {
+		
+		System.out.print("Insira o nome: ");
+		String nome[] = input.nextLine().split(" ");
+		
+		System.out.println("Nome da família: " + nome[nome.length-1]);
+		
+	}
 
+	public static void Exercicio8() {
+		
+	}
+	
+	public static void Exercicio9() {
+		
+	}
+
+	public static void Exercicio10() {
+		
+	}
+
+	public static void Exercicio11() {
+		
+	}
 
 
 }
