@@ -144,6 +144,16 @@ public class ModularizacaoGeral {
 
 	public static void Exercicio8() {
 		
+		System.out.print("Insira o nome do autor: ");
+		String nome[] = input.nextLine().toUpperCase().split(" ");
+		String resultado = nome[nome.length-1] + ", ";
+
+		for (int i = 0; i < nome.length-1; i++) {
+			resultado = resultado + nome[i].charAt(0)+". ";
+		}
+		
+		System.out.print("Resultado: " + resultado);
+		
 	}
 	
 	public static void Exercicio9() {
